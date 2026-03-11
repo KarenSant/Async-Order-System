@@ -32,7 +32,7 @@ class PedidoServiceTest {
     }
 
     @Test
-    @DisplayName("Deve lançar ExcecaoDeProcessamento em algum momento (Amostragem)")
+    @DisplayName("Deve lancar ExcecaoDeProcessamento")
     void deveLancarExcecaoAleatoria() {
         Pedido pedido = new Pedido(UUID.randomUUID(), "Teste Erro", 1, LocalDateTime.now());
         boolean erro = false;
@@ -48,7 +48,7 @@ class PedidoServiceTest {
             }
         }
 
-        assertTrue(erro, "A exceção de 20% não foi disparada em 50 tentativas");
+        assertTrue(erro, "A excecao de 20% nao foi disparada em 50 tentativas");
     }
 
 }
