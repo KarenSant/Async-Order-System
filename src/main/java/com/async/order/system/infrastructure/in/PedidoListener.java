@@ -34,7 +34,6 @@ public class PedidoListener {
 
             pedidoService.processar(pedido);
 
-            // Atualiza memória e publica na fila de SUCESSO
             statusService.atualizarStatus(id, "SUCESSO");
             Map<String, Object> statusSucesso = Map.of(
                     "idPedido", id,
